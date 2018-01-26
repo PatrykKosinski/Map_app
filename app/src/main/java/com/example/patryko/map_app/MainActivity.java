@@ -24,17 +24,24 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
+import java.util.UUID;
+
 public class MainActivity extends AppCompatActivity  {
 
     private static final String TAG = "MainActivity";
 
     private static final int ERROR_DIALOG_REQUEST = 9001;
 
+    private Localization localization;
+    //private LocalizationRepository repo = new LocalizationRepository();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        localization = new Localization(UUID.randomUUID(), "name", "discr", 10.0,10.0,10.0);
+//        repo.addLocation(localization);
 
         if(isServicesOK()){
             init();

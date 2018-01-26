@@ -6,7 +6,7 @@ import java.util.UUID;
  * Created by Patryko on 1/25/2018.
  */
 
-public class Localization {
+class Localization {
 
 
     private final double latitude;
