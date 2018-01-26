@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="252dp"
+        android:layout_height="309dp"
+        android:layout_margin="60dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="94dp">
+
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Map" />
+
+        <Button
+            android:id="@+id/btnAddLocalization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_weight="1"
+            android:text="Add localization" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

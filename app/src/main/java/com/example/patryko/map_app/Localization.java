@@ -1,0 +1,50 @@
+package com.example.patryko.map_app;
+
+import java.util.UUID;
+
+/**
+ * Created by Patryko on 1/25/2018.
+ */
+
+public class Localization {
+
+
+    private final double latitude;
+    private final double longitude;
+    private UUID id;
+    private final String name;
+    private final String desc;
+    private final double radius;
+
+    public Localization(UUID Id, String name, String desc, double radius, double lat, double lang) {
+        this.id = Id;
+        this.name = name;
+        this.desc = desc;
+        this.radius = radius;
+        this.longitude = lat;
+        this.latitude = lang;
+    }
+
+    public UUID getId(){
+        return id;
+    }
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+}
