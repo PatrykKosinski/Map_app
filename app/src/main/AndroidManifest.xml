@@ -36,6 +36,11 @@
         <activity android:name=".AddLocation" />
 
 
+        <service
+            android:name=".GeofenceTriggerIntentService"
+            android:exported="false"></service>
+
+
     </application>
 
 </manifest>

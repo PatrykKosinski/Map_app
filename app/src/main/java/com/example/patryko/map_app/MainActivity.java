@@ -1,7 +1,10 @@
 package com.example.patryko.map_app;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,7 +26,13 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.location.GeofencingClient;
+import com.google.android.gms.location.GeofencingRequest;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity  {
@@ -31,6 +40,16 @@ public class MainActivity extends AppCompatActivity  {
     private static final String TAG = "MainActivity";
 
     private static final int ERROR_DIALOG_REQUEST = 9001;
+
+
+
+    private PendingIntent mGeofencePendingIntent;
+    private LocalizationRepository locationRepository;
+    private GeofencingClient mGeofencingClient;
+    private final int GEOFENCE_EXPIRATION_IN_MILLISECONDS = 10*60*1000;
+
+
+
 
     private Localization localization;
     //private LocalizationRepository repo = new LocalizationRepository();
@@ -89,6 +108,6 @@ public class MainActivity extends AppCompatActivity  {
         }
         return false;
     }
-
+    
 }
 

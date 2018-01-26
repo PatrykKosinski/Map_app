@@ -53,17 +53,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
      ArrayList<Localization> locations = repository.getAllPositions();
         LatLng loc = null;
-
-
-//        loc = new LatLng(localization.getLatitude(),localization.getLongitude());
-//        mMap.addMarker(new MarkerOptions().position(loc).title(localization.getName()));
-//        CircleOptions circle = new CircleOptions();
-//        circle.center(loc);
-//        circle.radius(localization.getRadius());
-//        circle.strokeWidth(4);
-//        circle.strokeColor(Color.parseColor("#e6d9534f")); //Circle Color
-//        mMap.addCircle(circle);
-
         for(Localization pos : locations){
             loc = new LatLng(pos.getLatitude(), pos.getLongitude());
             mMap.addMarker(new MarkerOptions().position(loc).title(pos.getName()));
@@ -74,9 +63,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             circle.strokeColor(Color.parseColor("#e6d9534f")); //Circle Color
             mMap.addCircle(circle);
         }
-
-
-
         try{
             mMap.setMyLocationEnabled(true);
         }
@@ -117,11 +103,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-
-       // ArrayList<Localization> locations = repository.getAllPositions();
-
-
-
 
         getLocationPermission();
     }
