@@ -43,12 +43,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
-        localization = new Localization(UUID.randomUUID(), "Warszawa", "discr", 10.0,52.0,21.0);
 
         repository = new LocalizationRepository(this);
-
-
-   repository.addLocation(localization);
 
 
      ArrayList<Localization> locations = repository.getAllPositions();
@@ -88,7 +84,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     private static final String TAG = "MapActivity";
-
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;

@@ -14,7 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -35,12 +32,15 @@
         <activity android:name=".MapActivity" />
         <activity android:name=".AddLocation" />
 
-
+        <service
+            android:name=".Geofence"
+            android:exported="false" />
         <service
             android:name=".GeofenceTriggerIntentService"
+            android:exported="false" />
+        <service
+            android:name=".GeofenceIntent"
             android:exported="false"></service>
-
-
     </application>
 
 </manifest>
